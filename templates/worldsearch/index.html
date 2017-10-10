@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery !-->
+<!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/icon.css' %}">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="{% static 'js/materialize.js' %} "></script>
+<script src="{% static 'js/jquery.min.js' %}"> </script>
+<!-- jQuery UI !-->
+<link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+<script src="{% static 'js/jquery-ui.min.js' %}"></script>
+<style>
+
+    body{
+       margin-top:15%;
+    }
+</style>
+
+<body>
+<div class="container">
+<div class="col l12">
+    <div class="row">
+        <center>
+            <a class="waves-effect waves-light btn" href="http://54.200.238.9:8000/worldsearch/register/"><i class="material-icons left">add</i>Sign up</a>&nbsp;&nbsp;
+            <a class="waves-effect waves-light btn" href="http://54.200.238.9:8000/worldsearch/login/"><i class="material-icons left">input</i>Sign in</a>
+        </center>
+    </div>
+
+</div>
+</div>
+</body>
+</html>

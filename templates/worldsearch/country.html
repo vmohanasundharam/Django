@@ -1,0 +1,51 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery !-->
+<!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/icon.css' %}">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="{% static 'js/materialize.js' %} "></script>
+<script src="{% static 'js/jquery.min.js' %}"> </script>
+    <title>Title</title>
+
+<style>
+.out{
+float:right;
+padding:10px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="out">
+<a class="waves-effect waves-light btn" href=""http://54.200.238.9:8000/worldsearch/logout">Logout</a>
+</div>
+<br><br>
+
+    <br><br><br><br><br>
+     <ul class="collection with-header">
+
+    {% if country %}
+         <li class="collection-item">Country Name : {{ country }}</li>
+    {% endif %}
+
+    {% if district %}
+         <li class="collection-item">District : {{ district }}</li>
+    {% endif %}
+
+     {% if code %}
+         <li class="collection-item">Code : {{ code }}</li>
+    {% endif %}
+
+    {% if Population %}
+         <li class="collection-item">Population : {{ Population }}</li>
+    {% endif %}
+     </ul>
+</div>
+</body>
+</html>

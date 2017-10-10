@@ -1,0 +1,77 @@
+{% load staticfiles %}
+<html>
+   <head>
+      <title>The Materialize Selects Example</title>
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
+      <link rel = "stylesheet"
+         href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel = "stylesheet"
+         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type = "text/javascript"
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      </script> 
+      
+      <script>
+         $(document).ready(function() {
+            $('select').material_select();
+         });
+      </script>
+   </head>
+   
+   <body class = "container">   
+      <div class = "row">
+         <form class = "col l8" action="worldsearch/register" method="POST">
+            {% csrf_token %}
+             {% if required %}
+                <h4>Email Address Already Exists</h4>
+            {% endif %}
+             <div class="row">
+                <div class="input-field col l6">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="icon_prefix" type="text" name="fname" class="validate" placeholder="First Name">
+                </div>
+                <div class="input-field col l6">
+                  <input id="icon_prefix" type="text" name="lname" class="validate" placeholder="Last Name">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">email</i>
+                  <input id="icon_prefix" type="text" name="email" class="validate">
+                </div>
+           </div>
+
+           <div class="row">
+               <div class="input-field col s12">
+                  <i class="material-icons prefix">phone</i>
+                  <input id="icon_telephone" type="tel" name="mno" class="validate">
+                </div>
+            </div>
+
+            <div class = "row">
+                <div class="col l4">
+
+                </div>
+                <div class="col l6">
+                    <i class="material-icons prefix">person</i>
+                    <label>Gender</label>
+                       <select name="gender">
+                          <option value = "male">Male</option>
+                          <option value = "female">Female</option>
+
+                       </select>
+                </div>
+            </div>
+
+             <div class="row">
+                <center>
+                <button class="btn waves-effect waves-light" type="submit" name="action">Register<i class="material-icons right">add</i></button>
+                </center>
+             </div>
+
+         </form>       
+      </div>
+   </body>   
+</html>
