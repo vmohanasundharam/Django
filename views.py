@@ -160,7 +160,7 @@ def sendotp(memail):
         msender = "vmohanasundharam@gmail.com"
         s = smtplib.SMTP('smtp.gmail.com', 587)
         s.starttls()
-        s.login("vmohanasundharam@gmail.com", "notpermittedtologin")
+        s.login("vmohanasundharam@gmail.com", "")
         SUBJECT = "OTP"
         TEXT =  randint(100000, 999999)
 
